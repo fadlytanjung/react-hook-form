@@ -57,10 +57,10 @@ function App() {
           <input
             type="password"
             placeholder="Input Username"
-            {...register("password")}
+            {...register("password", { required: true, minLength: 5 })}
             {...errors.password && { className: "error" }}
           />
-          {errors.username && <span>Password is required</span>}
+          {errors.password && <span>Password is required and minimum 5 characters</span>}
         </div>
         <button type="submit" disabled={
           !isValid ||
