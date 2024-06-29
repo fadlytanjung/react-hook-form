@@ -26,8 +26,14 @@ function App() {
 
   console.log({ errors })
   return (
-    <>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <div style={{
+      width: "100vw",
+      height: "100vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }}>
+      <form onSubmit={handleSubmit(onSubmit)} style={{ width: 300 }}>
         <h1>Login User</h1>
         <div className="field">
           <label>Username</label>
@@ -63,7 +69,7 @@ function App() {
           Login
         </button>
       </form>
-    </>
+    </div>
   )
 }
 
